@@ -1,0 +1,35 @@
+{
+  "ignition": {
+    "config": {
+      "merge": [
+        {
+          "source": "https://raw.githubusercontent.com/scsole/ignition-configs/refs/heads/main/config.ign",
+          "verification": {
+            "hash": "sha512-505c33dd7bdfcc2a24b94074eec96675c421c4989d1e0b43b39a3c909c3f80c605bcb9b1380dbf7c44c6eb32753ce7244b4dd0d1a49d925bdd52203d6f890454"
+          }
+        }
+      ]
+    },
+    "version": "3.4.0"
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/NetworkManager/system-connections/enp1s0.nmconnection",
+        "contents": {
+          "compression": "",
+          "source": "data:,%5Bconnection%5D%0Aid%3Denp1s0%0Atype%3Dethernet%0Ainterface-name%3Denp1s0%0A%5Bipv4%5D%0Amethod%3Ddisabled%0A%5Bipv6%5D%0Amethod%3Ddisabled%0A"
+        },
+        "mode": 384
+      },
+      {
+        "path": "/etc/NetworkManager/system-connections/enp1s0.30.nmconnection",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/2zMQaqEMAyA4X3u0ofi2+Yk4iLUVANtWpKM4O0HYRazmPX/8625q3IO6bqB7Mg6Zp/+lgniHoxXJQXRYCuUOSk1/lrWJ2/Ah7F7GibdJO7UaCCUSofj/JjLBKK/nkHGGh8QVhnX/wa7enImyydCozsVkoqFqjM0jrPvSK/o8A4AAP//yMbmubkAAAA="
+        },
+        "mode": 384
+      }
+    ]
+  }
+}

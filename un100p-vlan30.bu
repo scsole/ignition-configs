@@ -1,0 +1,41 @@
+---
+variant: fcos
+version: 1.5.0
+ignition:
+  config:
+    merge:
+      - source: https://raw.githubusercontent.com/scsole/ignition-configs/refs/heads/main/config.ign
+        verification:
+          hash: sha512-505c33dd7bdfcc2a24b94074eec96675c421c4989d1e0b43b39a3c909c3f80c605bcb9b1380dbf7c44c6eb32753ce7244b4dd0d1a49d925bdd52203d6f890454
+storage:
+  files:
+    - path: /etc/NetworkManager/system-connections/enp1s0.nmconnection
+      mode: 0600
+      contents:
+        inline: |
+          [connection]
+          id=enp1s0
+          type=ethernet
+          interface-name=enp1s0
+          [ipv4]
+          method=disabled
+          [ipv6]
+          method=disabled
+    - path: /etc/NetworkManager/system-connections/enp1s0.30.nmconnection
+      mode: 0600
+      contents:
+        inline: |
+          [connection]
+          id=enp1s0.30
+          type=vlan
+          interface-name=enp1s0.30
+          [vlan]
+          egress-priority-map=
+          flags=1
+          id=30
+          ingress-priority-map=
+          parent=enp1s0
+          [ipv4]
+          dns-search=
+          may-fail=false
+          method=auto
